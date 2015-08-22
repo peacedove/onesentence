@@ -19,13 +19,17 @@ var observeDOM = (function(){
     }
 })();
 
-
 function main() {
     console.log(document.body); 
     observeDOM(document.body, function() {
         var wpvs = $("._wpv").each(function() {
             var obj = this;
-            if (obj.innerHTML.indexOf("一句話") != -1 || obj.innerHTML.indexOf("經典語錄大賽") != -1) {
+            if (obj.innerHTML.indexOf("一句話") != -1
+                (obj.innerHTML.indexOf("一句") != -1
+                 && obj.innerHTML.indexOf("話") != -1)
+                ||(obj.innerHTML.indexOf("一句") != -1 
+                 && obj.innerHTML.indexOf("大賽") != -1)
+                || obj.innerHTML.indexOf("經典語錄大賽") != -1) {
                 console.log(obj.innerHTML);
                 obj.closest(".fbpnormal").remove();
             }
