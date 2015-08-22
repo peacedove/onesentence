@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "onesentence",
-    "version": "0.1",
+    "version": "0.11",
     "description": "remove one sentence competition",
     "permissions": [
         "http://www.facebook.com/",
