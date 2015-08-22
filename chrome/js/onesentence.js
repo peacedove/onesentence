@@ -25,7 +25,7 @@ function main() {
         var wpvs = $("._wpv").each(function() {
             var obj = this;
             if (obj.innerHTML.indexOf("一句話") != -1
-                (obj.innerHTML.indexOf("一句") != -1
+                ||(obj.innerHTML.indexOf("一句") != -1
                  && obj.innerHTML.indexOf("話") != -1)
                 ||(obj.innerHTML.indexOf("一句") != -1 
                  && obj.innerHTML.indexOf("大賽") != -1)
